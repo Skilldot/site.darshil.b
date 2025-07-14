@@ -54,7 +54,8 @@ footer {
   width: 100vw;
   font-size: clamp(0.8rem, 2vw, 1.2rem);
   text-align: center;
-  padding: 1rem 0;
+  padding: env(safe-area-inset-top, 1rem) env(safe-area-inset-right, 1rem) env(safe-area-inset-bottom, 1rem) env(safe-area-inset-left, 1rem);
+  box-sizing: border-box;
 }
 
 h1, h2, h3 {
