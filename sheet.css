@@ -50,12 +50,18 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25vh;
+  height: auto; /* avoid fixed height */
   width: 100vw;
   font-size: clamp(0.8rem, 2vw, 1.2rem);
   text-align: center;
-  padding: env(safe-area-inset-top, 1rem) env(safe-area-inset-right, 1rem) env(safe-area-inset-bottom, 1rem) env(safe-area-inset-left, 1rem);
+  padding: 1rem;
+  padding-bottom: calc(2.5rem + env(safe-area-inset-bottom, 0px));
   box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 h1, h2, h3 {
